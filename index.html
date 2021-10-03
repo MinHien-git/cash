@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class = "container">
+        <div class ="f1"> 
+            <div>
+                <label for="bill">Bill</label>
+                <input type="number" id = "bill" onchange="count()" placeholder="0">
+            </div>
+            <div>
+                <label>Select Tip %</label>
+                <div class ="grid" id ="tip">
+                    <button type ="radio" id ="1" onclick="changeColor('0')" class ="tip" value ="5">5%</button>
+                    <button type ="radio" id ="2" onclick="changeColor('1')" class ="tip" value ="10">10%</button>
+                    <button type ="radio" id ="3" onclick="changeColor('2')" class ="tip" value ="15">15%</button>
+                    <button type ="radio" id ="4" onclick="changeColor('3')" class ="tip" value ="25">25%</button>
+                    <button type ="radio" id ="5" onclick="changeColor('4')" class ="tip" value ="50">50%</button>
+                    <input type="text" placeholder="CUSTOM" id ="custom" onchange="custom()"/>
+                </div>
+            </div>
+            <div>
+                <div class = "num">
+                    <label for="number">Number of People</label>
+                    <label for ="number" id ="warning">can't be zero</label>
+                </div>
+                <input type="number" placeholder="0" id ="number" onchange="count()" class ="number">
+            </div>
+        </div >
+        <div class ="f2">
+            <div class ="item">
+                <div class ="text">
+                    <h5>Tip Amount</h5>
+                    <p style="font-style : 10px">/ person</p>
+                </div>
+                <h4 id ="amount">$0.00</h4>
+            </div>    
+            <div class ="item">
+                <div class ="text">
+                    <h5>Total</h5>
+                    <p>/ person</p>
+                </div>
+                <h4 id ="total">$0.00</h4>
+            </div> 
+            <div class ="btn" >
+                <button type ="button" id ="btn" onclick="reset()">RESET</button>  
+            </div>
+            
+        </div>
+    
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
